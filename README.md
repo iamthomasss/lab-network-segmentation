@@ -13,7 +13,18 @@ A segmented home lab with OPNsense separating a victim zone from an attacker zon
 ![Lab network diagram](lab-network-diagram.png)
 
 ## IP plan
-(paste your table)
+| Zone | Subnet | Gateway | Who lives there |
+|---|---|---|---|
+| WAN | VMware NAT (vmnet8), 192.168.230.0/24 | 192.168.230.2 (VMware) | OPNsense's WAN interface only |
+| Victims | 10.10.10.0/24 | 10.10.10.1 (OPNsense) | Win10, Ubuntu |
+| Attacker | 10.10.20.0/24 | 10.10.20.1 (OPNsense) | Kali |
+
+### Fixed addresses
+
+| Fixed address | Machine | Why |
+|---|---|---|
+| 10.10.10.10 | Win10 | Rule 5 names Win10 as the only machine allowed to reach the admin page |
+
 
 ## Intended firewall rules
 1. Win10 and Ubuntu may reach the internet on web ports on HTTP (80) and HTTPS (443), and OPNsense on DNS (53), so they can browse and get updates
