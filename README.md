@@ -4,7 +4,7 @@ Segmented home lab: OPNsense firewall separating victim and attacker zones, with
 ## Goal
 A segmented home lab with OPNsense separating a victim zone from an attacker zone, so every attack crosses a firewall that controls and logs it.
 
-## Job skills shown
+## Skills shown
 - Network security and segmentation
 - Firewalls (rule design, default deny, logging)
 - Security infrastructure implementation and maintenance
